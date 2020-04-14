@@ -44,7 +44,7 @@ function copyMousePos(evt) {
 	var rect = cvs.getBoundingClientRect();
 	var x = parseInt(evt.clientX - rect.left);
 	var y = parseInt(evt.clientY - rect.top);
-	copyText = x+';'+y
+	copyText = '['+x+', '+y+', 1]';
 	navigator.clipboard.writeText(copyText).then(function() {
 	  console.log('ok')
 	}, function() {
